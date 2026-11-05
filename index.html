@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <meta
+      name="description"
+      content="Discover and book live music, food, comedy, and culture in your city."
+    />
+    <title>Ticketly — Make plans worth remembering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Ticketly home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M5 9.5A3.5 3.5 0 0 0 8.5 13h15A3.5 3.5 0 0 0 27 9.5v-1A2.5 2.5 0 0 0 24.5 6h-17A2.5 2.5 0 0 0 5 8.5v1Z" fill="currentColor" />
+            <path d="M5 22.5A3.5 3.5 0 0 1 8.5 19h15a3.5 3.5 0 0 1 3.5 3.5v1a2.5 2.5 0 0 1-2.5 2.5h-17A2.5 2.5 0 0 1 5 24.5v-2Z" fill="currentColor" />
+            <path d="M11 13v6m5-6v6m5-6v6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 2.5" />
+          </svg>
+        </span>
+        <span>ticketly</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#discover">Discover</a>
+        <a class="nav-link" href="#categories">Categories</a>
+        <a class="nav-link" href="#how-it-works">How it works</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button mobile-search" aria-label="Search events">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" /><path d="m16 16 4.5 4.5" /></svg>
+        </button>
+        <button class="sign-in">Sign in</button>
+        <a class="host-link" href="#how-it-works">Host an event <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="discover">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> GOOD THINGS ARE HAPPENING</div>
+          <h1>Make plans<br />worth <span>remembering.</span></h1>
+          <p>Find your people. Find your thing. Find a reason to get out there.</p>
+        </div>
+        <div class="hero-note" aria-hidden="true">
+          <span class="note-spark">✳</span>
+          <span>Little moments.<br /><strong>Big memories.</strong></span>
+        </div>
+
+        <form class="search-panel" id="event-search">
+          <label class="search-field">
+            <span class="field-icon location-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" /><circle cx="12" cy="10" r="2.3" /></svg>
+            </span>
+            <span class="field-content">
+              <span class="field-label">Where</span>
+              <select id="city-select" aria-label="Choose a city">
+                <option value="all">Anywhere near you</option>
+                <option value="Brooklyn">Brooklyn, NY</option>
+                <option value="Manhattan">Manhattan, NY</option>
+                <option value="Queens">Queens, NY</option>
+              </select>
+            </span>
+            <span class="select-chevron" aria-hidden="true">⌄</span>
+          </label>
+          <span class="search-divider" aria-hidden="true"></span>
+          <label class="search-field date-field">
+            <span class="field-icon calendar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="2" /><path d="M8 4v4m8-4v4M4 10h16" /></svg>
+            </span>
+            <span class="field-content">
+              <span class="field-label">When</span>
+              <select id="date-select" aria-label="Choose when">
+                <option value="all">Any date</option>
+                <option value="today">Today</option>
+                <option value="weekend">This weekend</option>
+                <option value="month">This month</option>
+              </select>
+            </span>
+            <span class="select-chevron" aria-hidden="true">⌄</span>
+          </label>
+          <span class="search-divider second-divider" aria-hidden="true"></span>
+          <label class="search-field what-field">
+            <span class="field-icon search-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8" /><path d="m16 16 4.5 4.5" /></svg>
+            </span>
+            <span class="field-content">
+              <span class="field-label">What are you into?</span>
+              <input id="query-input" type="search" placeholder="Concerts, comedy, ..." autocomplete="off" />
+            </span>
+          </label>
+          <button class="search-button" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" /><path d="m16 16 4.5 4.5" /></svg>
+            <span>Find events</span>
+          </button>
+        </form>
+
+        <div class="hero-bottom">
+          <span><span class="live-dot"></span> <strong>2,400+</strong> events happening this week</span>
+          <span class="hero-avatars" aria-label="Loved by the community">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=64&q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=64&q=80" alt="" />
+            <span>Join 18k+ happy planners</span>
+          </span>
+        </div>
+      </section>
+
+      <section class="events-section" id="categories">
+        <div class="section-topline">
+          <div>
+            <div class="section-kicker">YOUR CITY, YOUR CALL</div>
+            <h2>Find your kind of <span>fun.</span></h2>
+          </div>
+          <a class="view-all" href="#event-list">View all events <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="category-row" role="group" aria-label="Filter by category">
+          <button class="category-chip active" type="button" data-category="all"><span>✳</span> All the good stuff</button>
+          <button class="category-chip" type="button" data-category="Music"><span>♫</span> Music</button>
+          <button class="category-chip" type="button" data-category="Food & Drink"><span>♨</span> Food & drink</button>
+          <button class="category-chip" type="button" data-category="Arts & Culture"><span>✿</span> Arts & culture</button>
+          <button class="category-chip" type="button" data-category="Comedy"><span>☺</span> Comedy</button>
+          <button class="category-chip" type="button" data-category="Outdoors"><span>↟</span> Outdoors</button>
+        </div>
+
+        <div class="events-heading" id="event-list">
+          <h3>Good things coming up <span class="heading-spark">✳</span></h3>
+          <button class="sort-button" type="button" id="sort-button">Recommended <span aria-hidden="true">⌄</span></button>
+        </div>
+
+        <div class="event-grid" id="event-grid" aria-live="polite">
+          <article class="event-card" data-category="Music" data-city="Brooklyn" data-date="weekend" data-title="rooftop jazz sessions">
+            <div class="event-image image-jazz">
+              <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=900&q=85" alt="Jazz musicians performing on stage" />
+              <span class="image-tag">SELLING FAST</span>
+              <button class="favorite-button" type="button" aria-label="Save Rooftop Jazz Sessions" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5.2-8.8 11-8.8 11S3.2 14 3.2 8.8A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8.8 2.1Z" /></svg></button>
+            </div>
+            <div class="event-info">
+              <div class="event-meta"><span class="meta-date">FRI, NOV 6 · 7:30 PM</span><span class="category-label music-label">MUSIC</span></div>
+              <h4>Rooftop Jazz Sessions</h4>
+              <p class="event-venue">The William Vale · Brooklyn</p>
+              <div class="event-footer"><span class="price">From <strong>$28</strong></span><span class="attending"><span class="attendee-dots">●●●</span> +84 going</span></div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="Food & Drink" data-city="Manhattan" data-date="weekend" data-title="the little italy pasta crawl">
+            <div class="event-image image-pasta">
+              <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=85" alt="Fresh pasta plated at a restaurant" />
+              <span class="image-tag tag-new">JUST ADDED</span>
+              <button class="favorite-button" type="button" aria-label="Save The Little Italy Pasta Crawl" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5.2-8.8 11-8.8 11S3.2 14 3.2 8.8A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8.8 2.1Z" /></svg></button>
+            </div>
+            <div class="event-info">
+              <div class="event-meta"><span class="meta-date">SAT, NOV 7 · 1:00 PM</span><span class="category-label food-label">FOOD & DRINK</span></div>
+              <h4>The Little Italy Pasta Crawl</h4>
+              <p class="event-venue">Mulberry Street · Manhattan</p>
+              <div class="event-footer"><span class="price">From <strong>$42</strong></span><span class="attending"><span class="attendee-dots">●●●</span> +126 going</span></div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="Arts & Culture" data-city="Queens" data-date="month" data-title="after hours at the museum">
+            <div class="event-image image-museum">
+              <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=900&q=85" alt="Colorful contemporary art gallery" />
+              <span class="image-tag tag-pick">TICKETLY PICK</span>
+              <button class="favorite-button" type="button" aria-label="Save After Hours at the Museum" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5.2-8.8 11-8.8 11S3.2 14 3.2 8.8A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8.8 2.1Z" /></svg></button>
+            </div>
+            <div class="event-info">
+              <div class="event-meta"><span class="meta-date">THU, NOV 12 · 6:00 PM</span><span class="category-label arts-label">ARTS & CULTURE</span></div>
+              <h4>After Hours at the Museum</h4>
+              <p class="event-venue">MoMA PS1 · Queens</p>
+              <div class="event-footer"><span class="price">From <strong>$18</strong></span><span class="attending"><span class="attendee-dots">●●●</span> +51 going</span></div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="Comedy" data-city="Brooklyn" data-date="today" data-title="laughs in the garden">
+            <div class="event-image image-comedy">
+              <img src="https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=900&q=85" alt="Microphone on a small comedy stage" />
+              <span class="image-tag tag-limited">ONLY 12 LEFT</span>
+              <button class="favorite-button" type="button" aria-label="Save Laughs in the Garden" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5.2-8.8 11-8.8 11S3.2 14 3.2 8.8A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8.8 2.1Z" /></svg></button>
+            </div>
+            <div class="event-info">
+              <div class="event-meta"><span class="meta-date">TONIGHT · 8:00 PM</span><span class="category-label comedy-label">COMEDY</span></div>
+              <h4>Laughs in the Garden</h4>
+              <p class="event-venue">The Bell House · Brooklyn</p>
+              <div class="event-footer"><span class="price">From <strong>$16</strong></span><span class="attending"><span class="attendee-dots">●●●</span> +37 going</span></div>
+            </div>
+          </article>
+        </div>
+        <p class="empty-state" id="empty-state" hidden>No events match those filters. Try another search.</p>
+
+        <div class="browse-more-wrap">
+          <button class="browse-more" type="button" id="browse-more">Show me more <span aria-hidden="true">↓</span></button>
+        </div>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div class="how-content">
+          <div class="section-kicker">EASY AS IT SHOULD BE</div>
+          <h2>Less scrolling.<br /><span>More stories.</span></h2>
+          <p>Good plans shouldn't take all day to find. Discover something you'll love and get your tickets in just a few taps.</p>
+          <a class="how-link" href="#discover">Find your next thing <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="how-steps">
+          <div class="step"><span class="step-number">01</span><div><h3>Find your thing</h3><p>Browse local events picked for people like you.</p></div><span class="step-icon">⌕</span></div>
+          <div class="step"><span class="step-number">02</span><div><h3>Make it yours</h3><p>Choose your tickets. Invite your favorite people.</p></div><span class="step-icon">♡</span></div>
+          <div class="step"><span class="step-number">03</span><div><h3>Go make a memory</h3><p>Your tickets are ready whenever you are.</p></div><span class="step-icon">✳</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#" aria-label="Ticketly home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 9.5A3.5 3.5 0 0 0 8.5 13h15A3.5 3.5 0 0 0 27 9.5v-1A2.5 2.5 0 0 0 24.5 6h-17A2.5 2.5 0 0 0 5 8.5v1Z" fill="currentColor" /><path d="M5 22.5A3.5 3.5 0 0 1 8.5 19h15a3.5 3.5 0 0 1 3.5 3.5v1a2.5 2.5 0 0 1-2.5 2.5h-17A2.5 2.5 0 0 1 5 24.5v-2Z" fill="currentColor" /><path d="M11 13v6m5-6v6m5-6v6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 2.5" /></svg></span><span>ticketly</span></a>
+      <span class="footer-copy">Go out there. © 2026 Ticketly</span>
+      <div class="footer-links"><a href="#discover">Discover</a><a href="#how-it-works">About us</a><a href="mailto:hello@ticketly.example">Get in touch</a></div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
