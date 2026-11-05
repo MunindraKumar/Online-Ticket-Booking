@@ -1,0 +1,22 @@
+{
+  "name": "online-ticket-booking",
+  "version": "1.0.0",
+  "description": "Movie and theatre ticket booking backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "movie",
+    "booking",
+    "tickets",
+    "theatre"
+  ],
+  "author": "Munindra Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

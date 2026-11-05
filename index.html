@@ -221,6 +221,37 @@
       <span class="footer-copy">Lights down. Seats ready. © 2026 ShowTime</span>
       <div class="footer-links"><a href="#discover">Discover</a><a href="#how-it-works">About</a><a href="mailto:hello@showtime.example">Get in touch</a></div>
     </footer>
+
+    <div class="booking-modal hidden" id="booking-modal" aria-hidden="true">
+      <div class="booking-dialog" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+        <button class="close-booking" type="button" id="close-booking" aria-label="Close booking form">×</button>
+        <h3 id="booking-title">Book your tickets</h3>
+        <div id="booking-movie-summary" class="booking-summary"></div>
+        <form id="booking-form">
+          <div class="form-grid">
+            <label>
+              Full name
+              <input type="text" name="customerName" placeholder="John Doe" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="john@example.com" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" placeholder="(555) 123-4567" required />
+            </label>
+            <label>
+              Seats
+              <input type="text" name="seats" placeholder="A1, A2, A3" required />
+            </label>
+          </div>
+          <button class="confirm-booking" type="submit">Confirm booking</button>
+          <p id="booking-status" class="booking-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
